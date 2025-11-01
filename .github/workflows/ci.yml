@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [master]
+    branches: [ master, main ]
   pull_request:
   workflow_dispatch:
 
@@ -10,6 +10,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix: # All permutations of {rust, mcu}
         rust:
           - stable
