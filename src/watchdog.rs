@@ -54,7 +54,7 @@ impl IndependentWatchdog {
             feature = "stm32l433",
             feature = "stm32l443",
         )))]
-        dbgmcu.apb1_fzr1.modify(|_, w| w.dbg_iwdg_stop().bit(stop));
+        dbgmcu.apb1fzr1.modify(|_, w| w.dbg_iwdg_stop().bit(stop));
     }
 
     /// Sets the watchdog timer timout period. Max: 32768 ms
