@@ -110,10 +110,7 @@ pub use stm32l4::stm32l4x5 as pac;
 ))]
 pub use stm32l4::stm32l4x6 as pac;
 
-#[cfg(any(
-    feature = "stm32l4r5",
-    feature = "stm32l4s5"
-))]
+#[cfg(any(feature = "stm32l4r5", feature = "stm32l4s5"))]
 pub use stm32l4::stm32l4r5 as pac;
 
 #[cfg(any(feature = "stm32l4r9", feature = "stm32l4s9",))]

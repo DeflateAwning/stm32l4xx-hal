@@ -249,16 +249,12 @@ bus! {
     SDMMC => (APB2, sdmmcen, sdmmcsmen, sdmmcrst), // 10
 }
 
-#[cfg(any(
-    feature = "stm32l412",
-    feature = "stm32l422",
-))]
+#[cfg(any(feature = "stm32l412", feature = "stm32l422",))]
 bus! {
     DAC1 => (APB1R1, dac1en, dac1smen, dac1rst), // 29
 
     SDMMC => (APB2, sdmmcen, sdmmcsmen, sdmmcrst), // 10
 }
-
 
 // L4x1, L4x2, L4x5, or L4x6
 #[cfg(not(any(
