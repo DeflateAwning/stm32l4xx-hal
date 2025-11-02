@@ -246,7 +246,7 @@ bus! {
     feature = "stm32l475",
 ))]
 bus! {
-    DAC1 => (APB1R1, dac1en, dac1smen, dac1rst), // 29
+    DAC => (APB1R1, dac1en, dac1smen, dac1rst), // 29
 
     SDMMC => (APB2, sdmmcen, sdmmcsmen, sdmmcrst), // 10
 }
