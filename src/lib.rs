@@ -124,7 +124,12 @@ pub use crate::pac as stm32;
 
 pub mod traits;
 
-#[cfg(not(any(feature = "stm32l4r9", feature = "stm32l4s9",)))]
+#[cfg(not(any(
+    feature = "stm32l4r9",
+    feature = "stm32l4s9",
+    feature = "stm32l4r5",
+    feature = "stm32l4s5",
+)))]
 pub mod adc;
 #[cfg(not(any(feature = "stm32l4r9", feature = "stm32l4s9",)))]
 #[cfg(not(any(feature = "stm32l412",)))]
