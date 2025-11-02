@@ -275,8 +275,6 @@ impl Rtc {
                     feature = "stm32l431",
                     feature = "stm32l451",
                     feature = "stm32l471",
-                    feature = "stm32l412",
-                    feature = "stm32l422",
                     feature = "stm32l432",
                     feature = "stm32l442",
                     feature = "stm32l452",
@@ -291,8 +289,8 @@ impl Rtc {
                 ))]
                 let mut alrmar = rtc.alrmar();
 
-                #[cfg(any(feature = "stm32l4r5"))]
-                let mut alrmar = rtc.alrmar;
+                #[cfg(any(feature = "stm32l412", feature = "stm32l422", feature = "stm32l4r5"))]
+                let mut alrmar = &rtc.alrmar;
 
                 alrmar.modify(|_, w| unsafe {
                     w.dt()
@@ -334,8 +332,6 @@ impl Rtc {
                     feature = "stm32l431",
                     feature = "stm32l451",
                     feature = "stm32l471",
-                    feature = "stm32l412",
-                    feature = "stm32l422",
                     feature = "stm32l432",
                     feature = "stm32l442",
                     feature = "stm32l452",
@@ -350,8 +346,8 @@ impl Rtc {
                 ))]
                 let mut alrmbr = rtc.alrmbr();
 
-                #[cfg(any(feature = "stm32l4r5"))]
-                let mut alrmbr = rtc.alrmbr;
+                #[cfg(any(feature = "stm32l412", feature = "stm32l422", feature = "stm32l4r5"))]
+                let mut alrmbr = &rtc.alrmbr;
 
                 alrmbr.modify(|_, w| unsafe {
                     w.dt()
